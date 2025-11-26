@@ -231,6 +231,21 @@ input {
   position: relative;
 }
 
+.icon-svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: var(--color-primary);
+  stroke-width: 1.8;
+  fill: none;
+  display: block;
+}
+
+.icon-svg--search,
+.icon-svg--cart {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .icon--search::before {
   content: "";
   position: absolute;
