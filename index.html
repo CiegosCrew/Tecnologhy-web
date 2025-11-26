@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeonTech | Tienda de Tecnología Futurista</title>
+  <meta name="description" content="Tienda online de tecnología con estética futurista, minimalista y profesional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="site-root">
+    <header class="site-header" data-animate="fade-down">
+      <div class="container site-header__inner">
+        <a href="#hero" class="brand">
+          <span class="brand__logo">NT</span>
+          <span class="brand__text">
+            <span class="brand__title">NeonTech</span>
+            <span class="brand__subtitle">Future-ready hardware</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="#hero" class="site-nav__link">Inicio</a>
+          <a href="#catalogo" class="site-nav__link">Catálogo</a>
+          <a href="#producto" class="site-nav__link">Producto</a>
+          <a href="#carrito" class="site-nav__link">Carrito</a>
+        </nav>
+        <div class="site-header__actions">
+          <button class="icon-button" type="button" aria-label="Buscar">
+            <span class="icon icon--search"></span>
+          </button>
+          <button class="icon-button icon-button--cart" type="button" aria-label="Carrito" onclick="document.getElementById('carrito').scrollIntoView({ behavior: 'smooth' })">
+            <span class="icon icon--cart"></span>
+            <span class="cart-indicator" data-cart-count>0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero__background">
+          <div class="hero__glow hero__glow--primary parallax-layer" data-depth="0.15"></div>
+          <div class="hero__glow hero__glow--accent parallax-layer" data-depth="0.25"></div>
+          <div class="hero__orbit hero__orbit--outer parallax-layer" data-depth="0.05"></div>
+          <div class="hero__grid"></div>
+        </div>
+        <div class="container hero__content">
+          <div class="hero__copy" data-animate="slide-right">
+            <span class="eyebrow">Tecnología de próxima generación</span>
+            <h1>Eleva tu <span class="text-gradient">setup</span> al futuro</h1>
+            <p class="hero__text">
+              Hardware premium, iluminación inteligente y periféricos diseñados para quienes exigen 
+              rendimiento, precisión y una estética impecable.
+            </p>
+            <div class="hero__actions">
+              <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+              <a href="#destacados" class="btn btn-ghost">Ver lanzamientos</a>
+            </div>
+            <div class="hero__meta">
+              <div class="hero-meta-item">
+                <span class="hero-meta-item__dot hero-meta-item__dot--primary"></span>
+                <span class="hero-meta-item__label">Envío 24/48h</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-item__dot hero-meta-item__dot--accent"></span>
+                <span class="hero-meta-item__label">Garantía extendida 3 años</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-item__dot hero-meta-item__dot--outline"></span>
+                <span class="hero-meta-item__label">Soporte especializado</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero__visual" data-animate="slide-left" aria-label="Producto destacado">
+            <div class="hero-device-card">
+              <div class="hero-device-card__chip">Nuevo</div>
+              <div class="hero-device-card__image"></div>
+              <div class="hero-device-card__body">
+                <h2 class="hero-device-card__title">Auriculares QuantumWave X</h2>
+                <p class="hero-device-card__subtitle">Audio 3D inmersivo con cancelación inteligente de ruido.</p>
+                <div class="hero-device-card__meta">
+                  <span class="hero-device-card__price">$249.90</span>
+                  <span class="hero-device-card__badge">Hasta 12 cuotas</span>
+                </div>
+                <button class="btn btn-primary btn--block" type="button" data-add-to-cart data-product-id="quantum-headset">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="categorias" class="section section--padded" aria-labelledby="categorias-title">
+        <div class="container">
+          <header class="section-header" data-animate="fade-up">
+            <h2 id="categorias-title">Explora por categoría</h2>
+            <p>Todo tu ecosistema tecnológico, organizado para que encuentres lo que necesitas en segundos.</p>
+          </header>
+          <div class="category-grid" data-animate="fade-up">
+            <article class="category-card">
+              <div class="category-card__icon category-card__icon--primary"></div>
+              <h3>Setups &amp; escritorio</h3>
+              <p>Monitores, soportes, iluminación ambiente y accesorios para tu espacio de trabajo o gaming.</p>
+            </article>
+            <article class="category-card">
+              <div class="category-card__icon category-card__icon--accent"></div>
+              <h3>Periféricos pro</h3>
+              <p>Teclados mecánicos, mouse de alta precisión y alfombrillas optimizadas para eSports.</p>
+            </article>
+            <article class="category-card">
+              <div class="category-card__icon category-card__icon--secondary"></div>
+              <h3>Audio inmersivo</h3>
+              <p>Auriculares, DACs y sistemas de sonido diseñados para una experiencia envolvente.</p>
+            </article>
+            <article class="category-card">
+              <div class="category-card__icon category-card__icon--warning"></div>
+              <h3>Ofertas flash</h3>
+              <p>Descuentos limitados en hardware seleccionado. Stock dinámico en tiempo real.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="destacados" class="section section--padded section--tone" aria-labelledby="destacados-title">
+        <div class="container">
+          <header class="section-header" data-animate="fade-up">
+            <h2 id="destacados-title">Productos destacados</h2>
+            <p>Selección curada de lo más avanzado en tecnología para tu día a día.</p>
+          </header>
+          <div id="featured-grid" class="product-grid" data-animate="fade-up" data-skeleton>
+          </div>
+        </div>
+      </section>
+
+      <section id="promo" class="promo-banner" aria-label="Promoción destacada">
+        <div class="promo-banner__pulse"></div>
+        <div class="container promo-banner__inner" data-animate="fade-up">
+          <div class="promo-banner__copy">
+            <h2>Semana NeonTech: hasta <span class="text-strong">-30%</span> en periféricos pro</h2>
+            <p>Descuentos en combos de teclado + mouse + auriculares. Promoción válida hasta agotar stock.</p>
+          </div>
+          <div class="promo-banner__meta">
+            <span class="promo-tag promo-tag--hot">Nuevo</span>
+            <span class="promo-tag promo-tag--warning">Stock limitado</span>
+            <a href="#catalogo" class="btn btn-secondary">Ver ofertas</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalogo" class="section section--padded" aria-labelledby="catalogo-title">
+        <div class="container">
+          <header class="section-header" data-animate="fade-up">
+            <h2 id="catalogo-title">Catálogo</h2>
+            <p>Filtra y encuentra el dispositivo perfecto para tu flujo de trabajo o tus sesiones de juego.</p>
+          </header>
+
+          <div class="filters-bar" data-animate="fade-up">
+            <div class="filters-bar__group">
+              <button class="chip chip--active" type="button" data-filter="all">Todo</button>
+              <button class="chip" type="button" data-filter="setups">Setups</button>
+              <button class="chip" type="button" data-filter="perifericos">Periféricos</button>
+              <button class="chip" type="button" data-filter="audio">Audio</button>
+            </div>
+            <div class="filters-bar__group">
+              <button class="chip" type="button" data-sort="recommended">Recomendado</button>
+              <button class="chip" type="button" data-sort="price-asc">Precio ↑</button>
+              <button class="chip" type="button" data-sort="price-desc">Precio ↓</button>
+            </div>
+          </div>
+
+          <div id="catalog-grid" class="product-grid product-grid--catalog" data-animate="fade-up" data-skeleton>
+          </div>
+        </div>
+      </section>
+
+      <section id="producto" class="section section--padded section--tone" aria-labelledby="producto-title">
+        <div class="container product-detail" data-animate="fade-up">
+          <div class="product-detail__gallery">
+            <div class="product-detail__image-main" data-zoom-target>
+              <div class="product-detail__image-main-layer"></div>
+            </div>
+            <div class="product-detail__thumbs" aria-label="Galería de imágenes">
+              <button class="product-detail__thumb product-detail__thumb--active" type="button" data-gallery-src="default"></button>
+              <button class="product-detail__thumb" type="button" data-gallery-src="angle"></button>
+              <button class="product-detail__thumb" type="button" data-gallery-src="lighting"></button>
+            </div>
+          </div>
+
+          <div class="product-detail__info">
+            <h2 id="producto-title">Auriculares QuantumWave X</h2>
+            <p class="product-detail__subtitle">Sonido espacial, cancelación activa y diseño futurista con iluminación RGB inteligente.</p>
+
+            <div class="product-detail__pricing">
+              <div>
+                <span class="product-detail__price">$249.90</span>
+                <span class="product-detail__price-old">$289.90</span>
+                <span class="badge badge--discount">-14%</span>
+              </div>
+              <span class="product-detail__availability product-detail__availability--in">En stock</span>
+            </div>
+
+            <ul class="product-detail__specs" aria-label="Especificaciones técnicas">
+              <li>Driver de 50mm con respuesta de frecuencia ampliada.</li>
+              <li>Cancelación activa de ruido de hasta 40dB.</li>
+              <li>Conectividad dual: inalámbrica de baja latencia + cable removible.</li>
+              <li>Batería de hasta 40h con carga rápida USB-C.</li>
+            </ul>
+
+            <button class="btn btn-primary btn--lg" type="button" data-add-to-cart data-product-id="quantum-headset">
+              Añadir al carrito
+            </button>
+
+            <div class="product-detail__meta">
+              <span class="product-detail__meta-item">Entrega estimada: 24/48h</span>
+              <span class="product-detail__meta-item">Devolución gratuita 30 días</span>
+            </div>
+
+            <section class="reviews" aria-label="Reseñas de clientes">
+              <header class="reviews__header">
+                <div class="reviews__score">
+                  <span class="reviews__stars" aria-hidden="true">★★★★★</span>
+                  <span class="reviews__rating">4.8</span>
+                  <span class="reviews__count">(128 reseñas)</span>
+                </div>
+              </header>
+              <div class="reviews__list">
+                <article class="review">
+                  <h3 class="review__title">Sonido espectacular para gaming y trabajo</h3>
+                  <p class="review__text">La cancelación de ruido es excelente y la escena sonora es muy amplia. La calidad de construcción se siente premium.</p>
+                </article>
+                <article class="review">
+                  <h3 class="review__title">Muy cómodos para largas sesiones</h3>
+                  <p class="review__text">Los uso todo el día en la oficina y luego para jugar. No pesan casi nada y las almohadillas son muy suaves.</p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="carrito" class="section section--padded" aria-labelledby="carrito-title">
+        <div class="container cart" data-animate="fade-up">
+          <header class="cart__header">
+            <h2 id="carrito-title">Carrito &amp; checkout</h2>
+            <p>Revisa tu selección y completa tu compra en tres pasos claros y rápidos.</p>
+          </header>
+
+          <div class="cart-layout">
+            <div class="cart-layout__main">
+              <div class="cart-progress" aria-label="Progreso de compra">
+                <div class="cart-progress__labels">
+                  <span class="cart-progress__step cart-progress__step--active">Carrito</span>
+                  <span class="cart-progress__step">Datos</span>
+                  <span class="cart-progress__step">Confirmación</span>
+                </div>
+                <div class="progress">
+                  <div class="progress__bar" data-progress-bar></div>
+                </div>
+              </div>
+
+              <div class="cart-items" data-cart-items>
+              </div>
+
+              <p class="cart-empty" data-cart-empty>Tu carrito está vacío. Añade productos desde el catálogo o el producto destacado.</p>
+            </div>
+
+            <aside class="cart-layout__summary" aria-label="Resumen de compra">
+              <div class="cart-summary">
+                <h3 class="cart-summary__title">Resumen</h3>
+                <div class="cart-summary__row">
+                  <span>Subtotal</span>
+                  <span data-cart-subtotal>$0.00</span>
+                </div>
+                <div class="cart-summary__row">
+                  <span>Envío estimado</span>
+                  <span>Calculado al finalizar</span>
+                </div>
+                <div class="cart-summary__row cart-summary__row--total">
+                  <span>Total</span>
+                  <span data-cart-total>$0.00</span>
+                </div>
+                <button class="btn btn-primary btn--block" type="button" data-checkout-button disabled>
+                  Proceder al checkout
+                </button>
+                <p class="cart-summary__note">Pagos seguros con cifrado de nivel bancario.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__column">
+          <div class="brand brand--footer">
+            <span class="brand__logo">NT</span>
+            <span class="brand__text">
+              <span class="brand__title">NeonTech</span>
+              <span class="brand__subtitle">Tecnología de alto rendimiento</span>
+            </span>
+          </div>
+          <p class="site-footer__text">Tienda online especializada en hardware premium, setups minimalistas y periféricos de nueva generación.</p>
+        </div>
+        <div class="site-footer__column">
+          <h3 class="site-footer__title">Navegación</h3>
+          <ul class="site-footer__list">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#producto">Producto</a></li>
+            <li><a href="#carrito">Carrito</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__column">
+          <h3 class="site-footer__title">Soporte</h3>
+          <ul class="site-footer__list">
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Garantías</a></li>
+            <li><a href="#">Envíos y devoluciones</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__column">
+          <h3 class="site-footer__title">Mantente conectado</h3>
+          <p class="site-footer__text">Recibe lanzamientos exclusivos y ofertas limitadas.</p>
+          <form class="newsletter" onsubmit="event.preventDefault();">
+            <input class="newsletter__input" type="email" placeholder="Tu correo" aria-label="Correo electrónico" />
+            <button class="btn btn-secondary" type="submit">Unirme</button>
+          </form>
+          <div class="social-icons" aria-label="Redes sociales">
+            <span class="social-icon social-icon--primary"></span>
+            <span class="social-icon social-icon--primary"></span>
+            <span class="social-icon social-icon--primary"></span>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div class="container site-footer__bottom-inner">
+          <span>© <span data-year></span> NeonTech. Todos los derechos reservados.</span>
+          <div class="site-footer__legal">
+            <a href="#">Política de privacidad</a>
+            <span>•</span>
+            <a href="#">Términos y condiciones</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
