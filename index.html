@@ -28,6 +28,7 @@
           <a href="carrito.html" class="site-nav__link">Carrito</a>
         </nav>
         <div class="site-header__actions">
+          <div class="auth-controls" data-auth-controls></div>
           <button class="icon-button" type="button" aria-label="Buscar">
             <svg class="icon-svg icon-svg--search" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="11" cy="11" r="5.5" />
@@ -300,6 +301,33 @@
           </div>
         </div>
       </section>
+
+      <section id="admin-panel" class="section section--padded section--tone" aria-labelledby="admin-panel-title" data-admin-panel hidden>
+        <div class="container" data-animate="fade-up">
+          <header class="section-header">
+            <h2 id="admin-panel-title">Panel de administrador</h2>
+            <p>Solo visible cuando inicias sesión como administrador con tu correo registrado.</p>
+          </header>
+          <div class="admin-panel__grid">
+            <article class="admin-card">
+              <h3 class="admin-card__title">Resumen de la tienda demo</h3>
+              <p class="admin-card__text">Vista rápida de los productos configurados en este catálogo.</p>
+              <ul class="admin-card__list">
+                <li>Productos totales: <span data-admin-products-count>0</span></li>
+                <li>Productos destacados: <span data-admin-featured-count>0</span></li>
+              </ul>
+            </article>
+            <article class="admin-card">
+              <h3 class="admin-card__title">Accesos rápidos</h3>
+              <p class="admin-card__text">En un proyecto real aquí gestionarías productos, pedidos y usuarios.</p>
+              <ul class="admin-card__list">
+                <li><a href="catalogo.html">Ir al catálogo</a></li>
+                <li><a href="carrito.html">Ir al carrito</a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer" id="footer">
@@ -356,6 +384,68 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <div class="auth-modal" data-auth-modal="login" aria-hidden="true">
+    <div class="auth-modal__backdrop" data-auth-close></div>
+    <div class="auth-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <button class="auth-modal__close" type="button" data-auth-close>Cerrar</button>
+      <h2 id="login-title" class="auth-modal__title">Iniciar sesión</h2>
+      <p class="auth-modal__subtitle">Accede a tu cuenta NeonTech.</p>
+      <form data-auth-form="login">
+        <div class="auth-modal__fields">
+          <label class="auth-modal__field">
+            <span>Correo electrónico</span>
+            <input class="auth-modal__input" type="email" name="email" required />
+          </label>
+          <label class="auth-modal__field">
+            <span>Contraseña</span>
+            <input class="auth-modal__input" type="password" name="password" required />
+          </label>
+        </div>
+        <div class="auth-modal__footer">
+          <span>Si tu correo es de administrador verás el panel especial.</span>
+          <button class="btn btn-primary" type="submit">Entrar</button>
+        </div>
+        <p class="auth-modal__switch">
+          ¿No tienes cuenta?
+          <button class="auth-modal__link" type="button" data-auth-switch="register">Crear una cuenta</button>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <div class="auth-modal" data-auth-modal="register" aria-hidden="true">
+    <div class="auth-modal__backdrop" data-auth-close></div>
+    <div class="auth-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="register-title">
+      <button class="auth-modal__close" type="button" data-auth-close>Cerrar</button>
+      <h2 id="register-title" class="auth-modal__title">Crear cuenta</h2>
+      <p class="auth-modal__subtitle">Regístrate para guardar tu sesión en este navegador.</p>
+      <form data-auth-form="register">
+        <div class="auth-modal__fields">
+          <label class="auth-modal__field">
+            <span>Nombre (opcional)</span>
+            <input class="auth-modal__input" type="text" name="name" placeholder="Tu nombre" />
+          </label>
+          <label class="auth-modal__field">
+            <span>Correo electrónico</span>
+            <input class="auth-modal__input" type="email" name="email" required />
+          </label>
+          <label class="auth-modal__field">
+            <span>Contraseña</span>
+            <input class="auth-modal__input" type="password" name="password" minlength="4" required />
+          </label>
+        </div>
+        <div class="auth-modal__footer">
+          <span>Usa tu correo de administrador para obtener el panel.</span>
+          <button class="btn btn-primary" type="submit">Registrarme</button>
+        </div>
+        <p class="auth-modal__switch">
+          ¿Ya tienes cuenta?
+          <button class="auth-modal__link" type="button" data-auth-switch="login">Iniciar sesión</button>
+        </p>
+      </form>
+    </div>
   </div>
 
   <script src="./script.js" defer></script>
