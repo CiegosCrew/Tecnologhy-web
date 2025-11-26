@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeonTech | Catálogo</title>
+  <meta name="description" content="Catálogo de productos de NeonTech: setups, periféricos y audio futurista." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="site-root">
+    <header class="site-header" data-animate="fade-down">
+      <div class="container site-header__inner">
+        <a href="index.html#hero" class="brand">
+          <span class="brand__logo">NT</span>
+          <span class="brand__text">
+            <span class="brand__title">NeonTech</span>
+            <span class="brand__subtitle">Future-ready hardware</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="index.html#hero" class="site-nav__link">Inicio</a>
+          <a href="catalogo.html" class="site-nav__link site-nav__link--active">Catálogo</a>
+          <a href="producto.html" class="site-nav__link">Producto</a>
+          <a href="carrito.html" class="site-nav__link">Carrito</a>
+        </nav>
+        <div class="site-header__actions">
+          <button class="icon-button" type="button" aria-label="Buscar">
+            <span class="icon icon--search"></span>
+          </button>
+          <a class="icon-button icon-button--cart" href="carrito.html" aria-label="Carrito">
+            <span class="icon icon--cart"></span>
+            <span class="cart-indicator" data-cart-count>0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="catalogo" class="section section--padded" aria-labelledby="catalogo-title">
+        <div class="container">
+          <header class="section-header" data-animate="fade-up">
+            <h2 id="catalogo-title">Catálogo</h2>
+            <p>Filtra y encuentra el dispositivo perfecto para tu flujo de trabajo o tus sesiones de juego.</p>
+          </header>
+
+          <div class="filters-bar" data-animate="fade-up">
+            <div class="filters-bar__group">
+              <button class="chip chip--active" type="button" data-filter="all">Todo</button>
+              <button class="chip" type="button" data-filter="setups">Setups</button>
+              <button class="chip" type="button" data-filter="perifericos">Periféricos</button>
+              <button class="chip" type="button" data-filter="audio">Audio</button>
+            </div>
+            <div class="filters-bar__group">
+              <button class="chip" type="button" data-sort="recommended">Recomendado</button>
+              <button class="chip" type="button" data-sort="price-asc">Precio ↑</button>
+              <button class="chip" type="button" data-sort="price-desc">Precio ↓</button>
+            </div>
+          </div>
+
+          <div id="catalog-grid" class="product-grid product-grid--catalog" data-animate="fade-up" data-skeleton>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__column">
+          <div class="brand brand--footer">
+            <span class="brand__logo">NT</span>
+            <span class="brand__text">
+              <span class="brand__title">NeonTech</span>
+              <span class="brand__subtitle">Tecnología de alto rendimiento</span>
+            </span>
+          </div>
+          <p class="site-footer__text">Tienda online especializada en hardware premium, setups minimalistas y periféricos de nueva generación.</p>
+        </div>
+        <div class="site-footer__column">
+          <h3 class="site-footer__title">Navegación</h3>
+          <ul class="site-footer__list">
+            <li><a href="index.html#hero">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="producto.html">Producto</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__column">
+          <h3 class="site-footer__title">Soporte</h3>
+          <ul class="site-footer__list">
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Garantías</a></li>
+            <li><a href="#">Envíos y devoluciones</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__column">
+          <h3 class="site-footer__title">Mantente conectado</h3>
+          <p class="site-footer__text">Recibe lanzamientos exclusivos y ofertas limitadas.</p>
+          <form class="newsletter" onsubmit="event.preventDefault();">
+            <input class="newsletter__input" type="email" placeholder="Tu correo" aria-label="Correo electrónico" />
+            <button class="btn btn-secondary" type="submit">Unirme</button>
+          </form>
+          <div class="social-icons" aria-label="Redes sociales">
+            <span class="social-icon social-icon--primary"></span>
+            <span class="social-icon social-icon--primary"></span>
+            <span class="social-icon social-icon--primary"></span>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div class="container site-footer__bottom-inner">
+          <span>© <span data-year></span> NeonTech. Todos los derechos reservados.</span>
+          <div class="site-footer__legal">
+            <a href="#">Política de privacidad</a>
+            <span>•</span>
+            <a href="#">Términos y condiciones</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

@@ -31,6 +31,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   font-family: var(--font-sans);
@@ -136,6 +140,15 @@ input {
   cursor: pointer;
   transition: background 0.18s ease-out, color 0.18s ease-out, box-shadow 0.2s ease-out,
     transform 0.16s ease-out, border-color 0.18s ease-out;
+}
+
+.btn:focus-visible,
+.chip:focus-visible,
+.site-nav__link:focus-visible,
+.icon-button:focus-visible,
+.newsletter__input:focus-visible {
+  outline: 2px solid var(--color-primary-bright);
+  outline-offset: 2px;
 }
 
 .btn-primary {
@@ -367,6 +380,14 @@ input {
   border-radius: 999px;
   background: linear-gradient(90deg, #00a8e8, #39ff14);
   transition: width 0.2s ease-out;
+}
+
+.site-nav__link--active {
+  color: #f9fafb;
+}
+
+.site-nav__link--active::after {
+  width: 100%;
 }
 
 .site-nav__link:hover::after {

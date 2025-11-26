@@ -14,7 +14,7 @@
   <div class="site-root">
     <header class="site-header" data-animate="fade-down">
       <div class="container site-header__inner">
-        <a href="#hero" class="brand">
+        <a href="index.html#hero" class="brand">
           <span class="brand__logo">NT</span>
           <span class="brand__text">
             <span class="brand__title">NeonTech</span>
@@ -22,19 +22,19 @@
           </span>
         </a>
         <nav class="site-nav" aria-label="Navegación principal">
-          <a href="#hero" class="site-nav__link">Inicio</a>
-          <a href="#catalogo" class="site-nav__link">Catálogo</a>
-          <a href="#producto" class="site-nav__link">Producto</a>
-          <a href="#carrito" class="site-nav__link">Carrito</a>
+          <a href="index.html#hero" class="site-nav__link site-nav__link--active">Inicio</a>
+          <a href="catalogo.html" class="site-nav__link">Catálogo</a>
+          <a href="producto.html" class="site-nav__link">Producto</a>
+          <a href="carrito.html" class="site-nav__link">Carrito</a>
         </nav>
         <div class="site-header__actions">
           <button class="icon-button" type="button" aria-label="Buscar">
             <span class="icon icon--search"></span>
           </button>
-          <button class="icon-button icon-button--cart" type="button" aria-label="Carrito" onclick="document.getElementById('carrito').scrollIntoView({ behavior: 'smooth' })">
+          <a class="icon-button icon-button--cart" href="carrito.html" aria-label="Carrito">
             <span class="icon icon--cart"></span>
             <span class="cart-indicator" data-cart-count>0</span>
-          </button>
+          </a>
         </div>
       </div>
     </header>
@@ -56,7 +56,7 @@
               rendimiento, precisión y una estética impecable.
             </p>
             <div class="hero__actions">
-              <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+              <a href="catalogo.html" class="btn btn-primary">Ver catálogo</a>
               <a href="#destacados" class="btn btn-ghost">Ver lanzamientos</a>
             </div>
             <div class="hero__meta">
@@ -147,7 +147,7 @@
           <div class="promo-banner__meta">
             <span class="promo-tag promo-tag--hot">Nuevo</span>
             <span class="promo-tag promo-tag--warning">Stock limitado</span>
-            <a href="#catalogo" class="btn btn-secondary">Ver ofertas</a>
+            <a href="catalogo.html" class="btn btn-secondary">Ver ofertas</a>
           </div>
         </div>
       </section>
@@ -310,10 +310,10 @@
         <div class="site-footer__column">
           <h3 class="site-footer__title">Navegación</h3>
           <ul class="site-footer__list">
-            <li><a href="#hero">Inicio</a></li>
-            <li><a href="#catalogo">Catálogo</a></li>
-            <li><a href="#producto">Producto</a></li>
-            <li><a href="#carrito">Carrito</a></li>
+            <li><a href="index.html#hero">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="producto.html">Producto</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
           </ul>
         </div>
         <div class="site-footer__column">
